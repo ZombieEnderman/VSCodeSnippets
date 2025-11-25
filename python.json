@@ -1,0 +1,153 @@
+{
+	// Place your snippets for python here. Each snippet is defined under a snippet name and has a prefix, body and 
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+	// same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+	"output": {
+		"prefix": "pt",
+		"body": "print($0)",
+		"description": "終端機輸出"
+	},
+	"input": {
+		"prefix": "it",
+		"body": "input('$0')",
+		"description": "終端機輸入"
+	},
+	"if...else": {
+		"prefix": "ie",
+		"body": [
+			"if ${1:True}:",
+			"    ${2:pass}",
+			"else:",
+			"    ${0:pass}"
+		],
+		"description": "if...else結構"
+	},
+	"if...elif...else": {
+		"prefix": "ef",
+		"body": [
+			"if ${1:False}:",
+			"    ${2:pass}",
+			"elif ${3:True}:",
+			"    ${4:pass}",
+			"else:",
+			"    ${0:pass}"
+		],
+		"description": "if...elif...else結構"
+	},
+	"match...case": {
+		"prefix": "mc",
+		"body": [
+			"match ${1:1}:",
+			"    case ${2:0}:",
+			"        ${3:pass}",
+			"    case _:",
+			"        ${0:pass}"
+		],
+		"description": "模式比對"
+	},
+	"for...in...range": {
+		"prefix": "fr",
+		"body": [
+			"for ${1:_} in range($2):",
+			"    ${0:pass}"
+		],
+		"description": "for...in...range迴圈"
+	},
+	"for...in...iterable": {
+		"prefix": "fi",
+		"body": [
+			"for ${1:z} in ${2:list}:",
+			"    ${0:pass}"
+		],
+		"description": "for...in...iterable迴圈"
+	},
+	"while True": {
+		"prefix": "wt",
+		"body": [
+			"while True:",
+			"    if ${0:True}:",
+			"        break"
+		],
+		"description": "while True迴圈"
+	},
+	"while": {
+		"prefix": "we",
+		"body": [
+			"while ${1:0==1}:",
+			"    ${0:pass}"
+		],
+		"description": "while迴圈"
+	},
+	"def": {
+		"prefix": "df",
+		"body": [
+			"def ${1:fun}(${2:params}):",
+			"    ${0:pass}"
+		],
+		"description": "函數"
+	},
+	"lambda": {
+		"prefix": "la",
+		"body": "lambda ${1:x}:${0:x}",
+		"description": "匿名函數"
+	},
+	"class": {
+		"prefix": "cs",
+		"body": [
+			"class ${1:Name}:",
+			"    def __init__(self,${2:params}):",
+			"        ${3:pass}",
+			"",
+			"    def ${4:method}(self,${5:params}):",
+			"        ${0:pass}"
+		],
+		"description": "類別"
+	},
+	"import": {
+		"prefix": "im",
+		"body": "import ${0:json}",
+		"description": "導入整個模組"
+	},
+	"from...import": {
+		"prefix": "ft",
+		"body": "from ${1:json} import ${0:load}",
+		"description": "導入模組函數"
+	},
+	"try...except": {
+		"prefix": "tet",
+		"body": [
+			"try:",
+			"    $0",
+			"except ${1:Exception}:",
+			"    $2"
+		],
+		"description": "基本例外處理"
+	},
+	"try...except...finally": {
+		"prefix": "tef",
+		"body": [
+			"try:",
+			"    $4",
+			"except ${1:Exception} as ${2:e}:",
+			"    $3",
+			"finally:",
+			"    $0",
+		],
+		"description": "例外處理"
+	},
+	"raise Error": {
+		"prefix": "ree",
+		"body": "raise ${1:NameError}($0)",
+		"description": "拋出異常"
+	},
+}

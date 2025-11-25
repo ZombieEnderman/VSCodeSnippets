@@ -1,0 +1,190 @@
+{
+	// Place your snippets for csharp here. Each snippet is defined under a snippet name and has a prefix, body and 
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+	// same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+	"output and skip line": {
+		"prefix": "cwl",
+		"body": "Console.WriteLine($0);",
+		"description": "終端機跳行輸出"
+	},
+	"output": {
+		"prefix": "cw",
+		"body": "Console.Write(${0:\"\"});",
+		"description": "終端機輸出"
+	},
+	"input": {
+		"prefix": "crl",
+		"body": "Console.ReadLine();",
+		"description": "終端機輸入"
+	},
+	"to short": {
+		"prefix": "cst",
+		"body": "Convert.ToInt16(${0:false});",
+		"description": "轉成短整數"
+	},
+	"to int": {
+		"prefix": "cit",
+		"body": "Convert.ToInt32(${0:false});",
+		"description": "轉成整數"
+	},
+	"to long": {
+		"prefix": "clg",
+		"body": "Convert.ToInt64(${0:false});",
+		"description": "轉成長整數"
+	},
+	"to float": {
+		"prefix": "cft",
+		"body": "Convert.ToSingle(${0:false});",
+		"description": "轉成單精浮點數"
+	},
+	"to double": {
+		"prefix": "cde",
+		"body": "Convert.ToDouble(${0:false});",
+		"description": "轉成雙精浮點數"
+	},
+	"to decimal": {
+		"prefix": "cdl",
+		"body": "Convert.ToDecimal(${0:false});",
+		"description": "轉成高精浮點數"
+	},
+	"to boolean": {
+		"prefix": "cbn",
+		"body": "Convert.ToBoolean(${0:false});",
+		"description": "轉成布林值"
+	},
+	"to char": {
+		"prefix": "ccr",
+		"body": "Convert.ToChar(${0:false});",
+		"description": "轉成字元"
+	},
+	"to string": {
+		"prefix": "csg",
+		"body": "Convert.ToString(${0:false});",
+		"description": "轉成字串"
+	},
+	"if...else": {
+		"prefix": "ie",
+		"body": [
+			"if (${1:true})",
+			"{",
+			"    $2",
+			"}",
+			"else",
+			"{",
+			"    $0",
+			"}"
+		],
+		"description": "if...else結構"
+	},
+	"if...else if...else": {
+		"prefix": "ef",
+		"body": [
+			"if (${1:false})",
+			"{",
+			"    $2",
+			"}",
+			"else if (${3:true})",
+			"{",
+			"    $4",
+			"}",
+			"else",
+			"{",
+			"    $0",
+			"}"
+		],
+		"description": "if...else if...else結構"
+	},
+	"switch...case": {
+		"prefix": "sh",
+		"body": [
+			"switch (${1:0})",
+			"{",
+			"    case ${2:1}:",
+			"        $3",
+			"        break;",
+			"    default:",
+			"        $0",
+			"        break;",
+			"}"
+		],
+		"description": "模式比對"
+	},
+	"for loop": {
+		"prefix": "fp",
+		"body": [
+			"for (int ${1:i} = ${2:0}; ${3:i} < ${4:10}; ${5:i}++)",
+			"{",
+			"   $0",
+			"}"
+		],
+		"description": "for迴圈"
+	},
+	"foreach": {
+		"prefix": "fe",
+		"body": [
+			"foreach (var ${1:i} in ${2:\"\"})",
+			"{",
+			"   $0",
+			"}"
+		],
+		"description": "foreach迴圈"
+	},
+	"while": {
+		"prefix": "we",
+		"body": [
+			"while (${1:true})",
+			"{",
+			"    $0",
+			"}"
+		],
+		"description": "while迴圈"
+	},
+	"do...while": {
+		"prefix": "dw",
+		"body": [
+			"do",
+			"{",
+			"    $1",
+			"} while (${0:false});"
+		],
+		"description": "do...while迴圈"
+	},
+	"function": {
+		"prefix": "fun",
+		"body": [
+			"${1:void} ${2:Name}($3)",
+			"{",
+			"    $0",
+			"}",
+		],
+		"description": "函數"
+	},
+	"class": {
+		"prefix": "cs",
+		"body": [
+			"class ${1:Name}",
+			"{",
+			"    public ${2:int} ${3:age};",
+			"    public ${1:Name}(${2:int} ${4:age})",
+			"    {",
+			"        this.${3:age} = ${4:age};",
+			"    }",
+			"    public ${5:void} ${6:Pt}($7)",
+			"    {",
+			"        $0",
+			"    }",
+			"}"
+		],
+		"description": "類別"
+	},
+}

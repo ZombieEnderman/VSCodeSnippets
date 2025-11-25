@@ -1,0 +1,194 @@
+{
+	// Place your snippets for javascript here. Each snippet is defined under a snippet name and has a prefix, body and 
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+	// same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+	"output": {
+		"prefix": "cg",
+		"body": "console.log(${0:object});",
+		"description": "終端機輸出"
+	},
+	"console.time": {
+		"prefix": "ct",
+		"body": "console.time(${0:object});",
+		"description": "終端機起始執行時間"
+	},
+	"console.timeEnd": {
+		"prefix": "ce",
+		"body": "console.timeEnd(${0:object});",
+		"description": "終端機結束執行時間"
+	},
+	"typeof": {
+		"prefix": "tf",
+		"body": "typeof ${0:object}",
+		"description": "獲取類型"
+	},
+	"instanceof": {
+		"prefix": "sf",
+		"body": "${1:A} instanceof ${0:B}",
+		"description": "檢查類型"
+	},
+	"if...else": {
+		"prefix": "ie",
+		"body": [
+			"if (${1:condition}) {",
+			"    $2",
+			"}",
+			"else {",
+			"    $0",
+			"}"
+		],
+		"description": "if...else結構"
+	},
+	"if...else if...else": {
+		"prefix": "ef",
+		"body": [
+			"if (${1:condition}) {",
+			"    $2",
+			"}",
+			"else if (${3:condition2}) {",
+			"    $4",
+			"}",
+			"else {",
+			"    $0",
+			"}"
+		],
+		"description": "if...else if...else結構"
+	},
+	"switch": {
+		"prefix": "sh",
+		"body": [
+			"switch (${1:key}) {",
+			"    case ${2:value}:",
+			"        $3",
+			"        break;",
+			"",
+			"    default:",
+			"        $0",
+			"        break;",
+			"}"
+		],
+		"description": "模式比對"
+	},
+	"for...loop": {
+		"prefix": "fl",
+		"body": [
+			"for (let ${1:index} = 0; ${2:index} < ${3:array}.length; ${4:index}++) {",
+			"    $0",
+			"}"
+		],
+		"description": "for迴圈"
+	},
+	"for...of": {
+		"prefix": "fo",
+		"body": [
+			"for (const ${1:item} of ${2:object}) {",
+			"    $0",
+			"}"
+		],
+		"description": "for...of迴圈"
+	},
+	"for...in": {
+		"prefix": "fi",
+		"body": [
+			"for (const ${1:item} in ${2:object}) {",
+			"    $0",
+			"}"
+		],
+		"description": "for...in迴圈"
+	},
+	"foreach": {
+		"prefix": "fe",
+		"body": "${1:array}.forEach((${2:v}, ${3:i}) => ${0:console.log(v + i)});",
+		"description": "forEach方法"
+	},
+	"while": {
+		"prefix": "we",
+		"body": [
+			"while (${1:condition}){",
+			"    $0",
+			"}"
+		],
+		"description": "while迴圈"
+	},
+	"do...while": {
+		"prefix": "dw",
+		"body": [
+			"do {",
+			"    $1",
+			"} while (${0:condition});"
+		],
+		"description": "do...while迴圈"
+	},
+	"function": {
+		"prefix": "fn",
+		"body": [
+			"function ${1:name}(${2:params}) {",
+			"    $0",
+			"}"
+		],
+		"description": "函數"
+	},
+	"arrow function": {
+		"prefix": "af",
+		"body": "(${1:params}) => $0",
+		"description": "箭頭函數"
+	},
+	"class": {
+		"prefix": "cs",
+		"body": [
+			"class ${1:Name} {",
+			"    constructor(${2:params}){",
+			"        $3",
+			"    }",
+			"    ${4:method}(${5:params}){",
+			"        $0",
+			"    }",
+			"}"
+		],
+		"description": "類別"
+	},
+	"import": {
+		"prefix": "it",
+		"body": "import ${0:{log}} from ${1:'console'};",
+		"description": "導入模組"
+	},
+	"try...catch": {
+		"prefix": "tc",
+		"body": [
+			"try {",
+			"    $0",
+			"} catch (${1:e}) {",
+			"    $2",
+			"}"
+		],
+		"description": "基本例外捕捉"
+	},
+	"try...catch...finally": {
+		"prefix": "tcf",
+		"body": [
+			"try {",
+			"    $3",
+			"} catch (${1:e}) {",
+			"    $2",
+			"} finally {",
+			"    $0",
+			"}"
+		],
+		"description": "例外捕捉"
+	},
+	"throw Error": {
+		"prefix": "te",
+		"body": "throw new ${1:Error}($0);",
+		"description": "拋出異常"
+	},
+}
