@@ -1,17 +1,4 @@
 {
-	// Place your snippets for typescript here. Each snippet is defined under a snippet name and has a prefix, body and 
-	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
-	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
-	// same ids are connected.
-	// Example:
-	// "Print to console": {
-	// 	"prefix": "log",
-	// 	"body": [
-	// 		"console.log('$1');",
-	// 		"$2"
-	// 	],
-	// 	"description": "Log output to console"
-	// }
 	"output": {
 		"prefix": "cg",
 		"body": "console.log(${0:object});",
@@ -26,6 +13,16 @@
 		"prefix": "ce",
 		"body": "console.timeEnd(${0:object});",
 		"description": "終端機結束執行時間"
+	},
+	"typeof": {
+		"prefix": "tf",
+		"body": "typeof ${0:object}",
+		"description": "獲取類型"
+	},
+	"instanceof": {
+		"prefix": "sf",
+		"body": "${1:A} instanceof ${0:B}",
+		"description": "檢查類型"
 	},
 	"if...else": {
 		"prefix": "ie",
@@ -96,6 +93,11 @@
 		],
 		"description": "for...in迴圈"
 	},
+	"foreach": {
+		"prefix": "fe",
+		"body": "${1:array}.forEach((${2:v}, ${3:i}) => ${0:console.log(v + i)});",
+		"description": "forEach方法"
+	},
 	"while": {
 		"prefix": "we",
 		"body": [
@@ -114,4 +116,37 @@
 		],
 		"description": "do...while迴圈"
 	},
+	"function": {
+		"prefix": "fn",
+		"body": [
+			"function ${1:name}(${2:params}) {",
+			"    $0",
+			"}"
+		],
+		"description": "函數"
+	},
+	"arrow function": {
+		"prefix": "af",
+		"body": "(${1:params}) => $0",
+		"description": "箭頭函數"
+	},
+	"class": {
+		"prefix": "cs",
+		"body": [
+			"class ${1:Name} {",
+			"    constructor(${2:params}){",
+			"        $3",
+			"    }",
+			"    ${4:method}(${5:params}){",
+			"        $0",
+			"    }",
+			"}"
+		],
+		"description": "類別"
+	},
+	"import": {
+		"prefix": "it",
+		"body": "import ${0:{log}} from ${1:'console'};",
+		"description": "導入模組"
+	}
 }
