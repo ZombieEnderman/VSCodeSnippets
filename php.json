@@ -4,6 +4,11 @@
 		"body": "echo ${0:0};",
 		"description": "終端機輸出"
 	},
+	"output and format": {
+		"prefix": "pf",
+		"body": "printf(\"${0:%d}\",${1:0});",
+		"description": "終端機格式化輸出"
+	},
 	"input": {
 		"prefix": "gs",
 		"body": "fgets(STDIN);",
@@ -13,5 +18,92 @@
 		"prefix": "tm",
 		"body": "trim(${0:0})",
 		"description": "去除跳脫字元"
+	},
+	"if...else": {
+		"prefix": "ie",
+		"body": [
+			"if (${1:true}) {",
+			"    $2",
+			"}",
+			"else {",
+			"    $0",
+			"}"
+		],
+		"description": "if...else結構"
+	},
+	"if...else if...else": {
+		"prefix": "ef",
+		"body": [
+			"if (${1:false}) {",
+			"    $2",
+			"}",
+			"else if (${3:true}) {",
+			"    $4",
+			"}",
+			"else {",
+			"    $0",
+			"}"
+		],
+		"description": "if...else if...else結構"
+	},
+	"switch": {
+		"prefix": "sh",
+		"body": [
+			"switch (${1:\\$key}) {",
+			"    case ${2:'value'}:",
+			"        $3",
+			"        break;",
+			"",
+			"    default:",
+			"        $0",
+			"        break;",
+			"}"
+		],
+		"description": "模式比對"
+	},
+	"for...loop": {
+		"prefix": "fp",
+		"body": [
+			"for (${1:\\$index} = 0; ${2:\\$index} < ${3:10}; ${4:\\$index}++) {",
+			"    $0",
+			"}"
+		],
+		"description": "for迴圈"
+	},
+	"foreach": {
+		"prefix": "fe",
+		"body": [
+			"foreach(${1:\\$var} as ${2:\\$a}) {",
+			"   $0",
+			"}"
+		],
+		"description": "foreach迴圈"
+	},
+	"while": {
+		"prefix": "we",
+		"body": [
+			"while (${1:true}) {",
+			"    $0",
+			"}"
+		],
+		"description": "while迴圈"
+	},
+	"do...while": {
+		"prefix": "dw",
+		"body": [
+			"do {",
+			"    $1",
+			"} while (${0:false});"
+		],
+		"description": "do...while迴圈"
+	},
+	"function": {
+		"prefix": "fn",
+		"body": [
+			"function ${1:name}(${2:\\$params}) {",
+			"    $0",
+			"}"
+		],
+		"description": "函數"
 	}
 }
