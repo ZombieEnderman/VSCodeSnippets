@@ -1,0 +1,62 @@
+{
+	"output and format": {
+		"prefix": "pf",
+		"body": "printf(\"$0\", ${1:a});",
+		"description": "格式化輸出"
+	},
+	"input and format": {
+		"prefix": "sf",
+		"body": "scanf(\"%${0:d}\", &${1:a});",
+		"description": "格式化輸入"
+	},
+	"output char": {
+		"prefix": "pc",
+		"body": "putchar(${0:a});",
+		"description": "字元輸出"
+	},
+	"input of char buffered": {
+		"prefix": "gcr",
+		"body": "getchar();",
+		"description": "緩衝字元輸入"
+	},
+	"output string skip line": {
+		"prefix": "ps",
+		"body": "puts(${0:a});",
+		"description": "自動換行字串輸出"
+	},
+	"output string stream": {
+		"prefix": "fp",
+		"body": "fputs(${0:a}, stdout);",
+		"description": "指定串流字串輸出"
+	},
+	"input string": {
+		"prefix": "fg",
+		"body": "fgets(${0:a}, ${1:2}, stdin);",
+		"description": "指定串流字串輸入"
+	},
+	"input char no echo": {
+		"prefix": "gc",
+		"body": "getch();",
+		"description": "無痕即時字元輸入"
+	},
+	"input char echo": {
+		"prefix": "gce",
+		"body": "getche();",
+		"description": "即時字元輸入"
+	},
+	"convert type": {
+		"prefix": "tp",
+		"body": "(${0:int})${1:a}",
+		"description": "強制型別轉換"
+	},
+	"sizeof operator": {
+		"prefix": "sif",
+		"body": "sizeof ${0:a}",
+		"description": "獲取記憶體大小"
+	},
+	"include header": {
+		"prefix": "ic",
+		"body": "#include ${0:<stdio.h>}",
+		"description": "引用標頭檔"
+	}
+}
