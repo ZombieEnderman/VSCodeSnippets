@@ -131,6 +131,16 @@
 		],
 		"description": "do...while迴圈"
 	},
+	"function": {
+		"prefix": "fun",
+		"body": [
+			"${1:void} ${2:Name}($3)",
+			"{",
+			"    $0",
+			"}"
+		],
+		"description": "函數"
+	},
 	"include header": {
 		"prefix": "ic",
 		"body": "#include ${0:<stdio.h>}",
