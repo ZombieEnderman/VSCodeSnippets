@@ -145,5 +145,10 @@
 		"prefix": "ic",
 		"body": "#include ${0:<stdio.h>}",
 		"description": "引用標頭檔"
+	},
+	"macro": {
+		"prefix": "df",
+		"body": "#define ${1:rt} ${0:return}",
+		"description": "巨集"
 	}
 }
