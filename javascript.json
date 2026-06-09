@@ -146,7 +146,7 @@
 	},
 	"import": {
 		"prefix": "it",
-		"body": "import ${0:{log}} from ${1:'console'};",
+		"body": "import {${0:log}} from ${1:'console'};",
 		"description": "導入模組"
 	},
 	"try...catch": {
