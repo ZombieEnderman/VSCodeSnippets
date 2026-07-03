@@ -1,0 +1,22 @@
+{
+	"output and skip line": {
+		"prefix": "pt",
+		"body": "print($0)",
+		"description": "終端機跳行輸出"
+	},
+	"output": {
+		"prefix": "wr",
+		"body": "io.write($0)",
+		"description": "終端機輸出"
+	},
+	"input": {
+		"prefix": "rd",
+		"body": "io.read($0)",
+		"description": "終端機輸入"
+	},
+	"format": {
+		"prefix": "ft",
+		"body": "string.format(\"$1\", ${0:a})",
+		"description": "格式化"
+	}
+}
