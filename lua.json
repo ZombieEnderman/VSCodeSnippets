@@ -18,5 +18,34 @@
 		"prefix": "ft",
 		"body": "string.format(\"$1\", ${0:a})",
 		"description": "格式化"
+	},
+	"local variable": {
+		"prefix": "lo",
+		"body": "local ${1:a} = $0",
+		"description": "區域變數"
+	},
+	"if...else": {
+		"prefix": "ie",
+		"body": [
+			"if ${1:true} then",
+			"    $2",
+			"else",
+			"    $0",
+			"end"
+		],
+		"description": "if...else結構"
+	},
+	"if...elsif...else": {
+		"prefix": "ef",
+		"body": [
+			"if ${1:false} then",
+			"    $2",
+			"elseif ${3:true} then",
+			"    $4",
+			"else",
+			"    $0",
+			"end"
+		],
+		"description": "if...elseif...else結構"
 	}
 }
