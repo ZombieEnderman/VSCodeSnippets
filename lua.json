@@ -47,5 +47,41 @@
 			"end"
 		],
 		"description": "if...elseif...else結構"
+	},
+	"for loop": {
+		"prefix": "fd",
+		"body": [
+			"for ${1:i} = ${2:1}, ${3:10} do",
+			"   $0",
+			"end"
+		],
+		"description": "for迴圈"
+	},
+	"for...in": {
+		"prefix": "fi",
+		"body": [
+			"for ${1:key}, ${2:value} in pairs(${3:{\\}}) do",
+			"   $0",
+			"end"
+		],
+		"description": "for...in迴圈"
+	},
+	"while": {
+		"prefix": "we",
+		"body": [
+			"while ${1:a > 10} do",
+			"    $0",
+			"end"
+		],
+		"description": "while迴圈"
+	},
+	"repeat...until": {
+		"prefix": "ru",
+		"body": [
+			"repeat",
+			"   $0",
+			"until ${1:a > 10}"
+		],
+		"description": "repeat...until迴圈"
 	}
 }
