@@ -9,14 +9,25 @@
 		"body": "print(${0:Object})",
 		"description": "終端機輸出"
 	},
-	"def": {
-		"prefix": "df",
-		"body": [
-			"def ${1:name}(${2:params})",
-			"  ${0:nil}",
-			"end"
-		],
-		"description": "函數"
+	"output and format": {
+		"prefix": "pf",
+		"body": "printf(\"${0:%d}\",${1:0})",
+		"description": "終端機格式化輸出"
+	},
+	"input": {
+		"prefix": "gs",
+		"body": "gets",
+		"description": "終端機輸入"
+	},
+	"remove escape character": {
+		"prefix": ".cp",
+		"body": ".chomp",
+		"description": "去除跳脫字元"
+	},
+	"get type": {
+		"prefix": ".cs",
+		"body": ".class",
+		"description": "獲取類型"
 	},
 	"if...else": {
 		"prefix": "ie",
@@ -41,5 +52,32 @@
 			"end"
 		],
 		"description": "if...elsif...else結構"
+	},
+	"unless": {
+		"prefix": "us",
+		"body": [
+			"unless ${1:a > 10}",
+			"  $0",
+			"end",
+		],
+		"description": "unless結構"
+	},
+	"until": {
+		"prefix": "ul",
+		"body": [
+			"until ${1:a > 10}",
+			"  $0",
+			"end",
+		],
+		"description": "until迴圈"
+	},
+	"def": {
+		"prefix": "df",
+		"body": [
+			"def ${1:name}(${2:params})",
+			"  ${0:nil}",
+			"end"
+		],
+		"description": "函數"
 	}
 }

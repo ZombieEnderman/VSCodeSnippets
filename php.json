@@ -59,7 +59,7 @@
 			"        break;",
 			"}"
 		],
-		"description": "模式比對"
+		"description": "switch...case結構"
 	},
 	"for...loop": {
 		"prefix": "fp",
