@@ -40,7 +40,7 @@
 			"    case _:",
 			"        ${0:pass}"
 		],
-		"description": "模式比對"
+		"description": "match...case結構"
 	},
 	"for...in...range": {
 		"prefix": "fr",

@@ -62,6 +62,54 @@
 		],
 		"description": "unless結構"
 	},
+	"case...when": {
+		"prefix": "cw",
+		"body": [
+			"case ${1:a}",
+			"when ${2:0}",
+			"  $3",
+			"else",
+			"  $0",
+			"end"
+		],
+		"description": "case...when結構"
+	},
+	"for...in": {
+		"prefix": "fr",
+		"body": [
+			"for ${1:i} in ${2:1..2}",
+			"  $0",
+			"end"
+		],
+		"description": "for...in迴圈"
+	},
+	"each not string": {
+		"prefix": "eh",
+		"body": [
+			"${1:a}.each do |${2:i}|",
+			"  $0",
+			"end"
+		],
+		"description": "each迴圈(非字串)"
+	},
+	"each string": {
+		"prefix": "ehc",
+		"body": [
+			"${1:a}.each_char do |${2:i}|",
+			"  $0",
+			"end"
+		],
+		"description": "each迴圈(字串)"
+	},
+	"while": {
+		"prefix": "we",
+		"body": [
+			"while ${1:a < 1}",
+			"  $0",
+			"end"
+		],
+		"description": "while迴圈"
+	},
 	"until": {
 		"prefix": "ul",
 		"body": [
@@ -70,6 +118,15 @@
 			"end",
 		],
 		"description": "until迴圈"
+	},
+	"loop...do": {
+		"prefix": "lp",
+		"body": [
+			"loop do",
+			"  $0",
+			"end"
+		],
+		"description": "無限迴圈"
 	},
 	"def": {
 		"prefix": "df",
