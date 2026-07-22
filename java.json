@@ -104,7 +104,7 @@
 			"        break;",
 			"}"
 		],
-		"description": "模式比對"
+		"description": "switch...case結構"
 	},
 	"for loop": {
 		"prefix": "fp",
@@ -142,6 +142,17 @@
 		],
 		"description": "do...while迴圈"
 	},
+	"main program": {
+		"prefix": "main",
+		"body": [
+			"public class ${1:test} {",
+			"    public static void main(${2:String[] args}) {",
+			"        $0",
+			"    }",
+			"}"
+		],
+		"description": "主程式結構"
+	},
 	"function": {
 		"prefix": "fun",
 		"body": [
@@ -150,6 +161,17 @@
 			"}"
 		],
 		"description": "函數"
+	},
+	"enum": {
+		"prefix": "em",
+		"body": [
+			"enum ${1:State}",
+			"{",
+			"    ${2:offline},",
+			"    ${0:online}",
+			"}"
+		],
+		"description": "列舉"
 	},
 	"class": {
 		"prefix": "cs",
@@ -165,6 +187,26 @@
 			"}"
 		],
 		"description": "類別"
+	},
+	"abstract class": {
+		"prefix": "acs",
+		"body": [
+			"abstract class ${1:Box}",
+			"{",
+			"    public abstract ${2:void} ${3:Info}($0);",
+			"}"
+		],
+		"description": "抽象類別"
+	},
+	"interface": {
+		"prefix": "itf",
+		"body": [
+			"interface ${1:IUI}",
+			"{",
+			"    ${2:void} ${3:Info}($0);",
+			"}"
+		],
+		"description": "介面"
 	},
 	"import": {
 		"prefix": "it",
