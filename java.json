@@ -165,8 +165,7 @@
 	"enum": {
 		"prefix": "em",
 		"body": [
-			"enum ${1:State}",
-			"{",
+			"enum ${1:State} {",
 			"    ${2:offline},",
 			"    ${0:online}",
 			"}"
@@ -191,8 +190,7 @@
 	"abstract class": {
 		"prefix": "acs",
 		"body": [
-			"abstract class ${1:Box}",
-			"{",
+			"abstract class ${1:Box} {",
 			"    public abstract ${2:void} ${3:Info}($0);",
 			"}"
 		],
@@ -201,8 +199,7 @@
 	"interface": {
 		"prefix": "itf",
 		"body": [
-			"interface ${1:IUI}",
-			"{",
+			"interface ${1:IUI} {",
 			"    ${2:void} ${3:Info}($0);",
 			"}"
 		],

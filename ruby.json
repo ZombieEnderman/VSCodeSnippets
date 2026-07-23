@@ -58,7 +58,7 @@
 		"body": [
 			"unless ${1:a > 10}",
 			"  $0",
-			"end",
+			"end"
 		],
 		"description": "unless結構"
 	},
@@ -115,7 +115,7 @@
 		"body": [
 			"until ${1:a > 10}",
 			"  $0",
-			"end",
+			"end"
 		],
 		"description": "until迴圈"
 	},

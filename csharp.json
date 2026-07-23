@@ -151,6 +151,19 @@
 		],
 		"description": "do...while迴圈"
 	},
+	"main program": {
+		"prefix": "main",
+		"body": [
+			"public class ${1:Test}",
+			"{",
+			"    public static void Main(${2:string[] args})",
+			"    {",
+			"        $0",
+			"    }",
+			"}"
+		],
+		"description": "主程式結構"
+	},
 	"function": {
 		"prefix": "fun",
 		"body": [
@@ -219,5 +232,37 @@
 			"}"
 		],
 		"description": "介面"
+	},
+	"try...catch": {
+		"prefix": "tch",
+		"body": [
+			"try",
+			"{",
+			"    $1",
+			"}",
+			"catch (${2:Exception} e)",
+			"{",
+			"    $0",
+			"}"
+		],
+		"description": "基本例外處理"
+	},
+	"try...catch...finally": {
+		"prefix": "tcf",
+		"body": [
+			"try",
+			"{",
+			"    $1",
+			"}",
+			"catch (${2:Exception} e)",
+			"{",
+			"    $3",
+			"}",
+			"finally",
+			"{",
+			"    $0",
+			"}"
+		],
+		"description": "例外處理"
 	}
 }
