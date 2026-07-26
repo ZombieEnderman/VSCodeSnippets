@@ -115,8 +115,8 @@
 		"body": [
 			"try:",
 			"    $0",
-			"except ${1:Exception}:",
-			"    $2"
+			"except ${1:Exception} as ${2:e}:",
+			"    $3"
 		],
 		"description": "基本例外處理"
 	},
@@ -124,11 +124,11 @@
 		"prefix": "tef",
 		"body": [
 			"try:",
-			"    $4",
+			"    $0",
 			"except ${1:Exception} as ${2:e}:",
 			"    $3",
 			"finally:",
-			"    $0"
+			"    $4"
 		],
 		"description": "例外處理"
 	},
@@ -136,5 +136,13 @@
 		"prefix": "ree",
 		"body": "raise ${1:NameError}($0)",
 		"description": "拋出異常"
+	},
+	"open file": {
+		"prefix": "op",
+		"body": [
+			"with open(${1:file}, ${2:'w'}, encoding=\"utf-8\") as ${3:f}:",
+			"    pass",
+		],
+		"description": "開啟檔案"
 	}
 }

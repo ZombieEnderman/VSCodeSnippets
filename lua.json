@@ -4,15 +4,25 @@
 		"body": "print($0)",
 		"description": "終端機跳行輸出"
 	},
-	"output": {
+	"default output": {
 		"prefix": "wr",
 		"body": "io.write($0)",
-		"description": "終端機輸出"
+		"description": "預設輸出"
 	},
-	"input": {
+	"default input": {
 		"prefix": "rd",
 		"body": "io.read($0)",
-		"description": "終端機輸入"
+		"description": "預設輸入"
+	},
+	"Preset intput file": {
+		"prefix": "it",
+		"body": "io.input(${0:path})",
+		"description": "預設輸入檔案"
+	},
+	"Preset output file": {
+		"prefix": "ot",
+		"body": "io.output(${0:path})",
+		"description": "預設輸出檔案"
 	},
 	"format": {
 		"prefix": "ft",
@@ -21,7 +31,7 @@
 	},
 	"local variable": {
 		"prefix": "lo",
-		"body": "local ${1:a} = $0",
+		"body": "local ${1:a} = ${0:a}",
 		"description": "區域變數"
 	},
 	"if...else": {
@@ -92,5 +102,36 @@
 			"end"
 		],
 		"description": "函數"
+	},
+	"open file(read mod)": {
+		"prefix": "opr",
+		"body": "io.open(${0:path}, 'r')",
+		"description": "開啟檔案(讀取模式)"
+	},
+	"open file(overwrite mod)": {
+		"prefix": "opw",
+		"body": "io.open(${0:path}, 'w')",
+		"description": "開啟檔案(覆寫模式)"
+	},
+	"open file(append mod)": {
+		"prefix": "opa",
+		"body": "io.open(${0:path}, 'a')",
+		"description": "開啟檔案(附加模式)"
+	},
+	"read to file": {
+		"prefix": "frd",
+		"body": [
+			"${1:f}:read($0)",
+			"${1:f}:close()"
+		],
+		"description": "讀取檔案"
+	},
+	"write to file": {
+		"prefix": "fwr",
+		"body": [
+			"${1:f}:write($0)",
+			"${1:f}:close()"
+		],
+		"description": "寫入檔案"
 	}
 }
