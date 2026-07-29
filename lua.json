@@ -31,7 +31,7 @@
 	},
 	"local variable": {
 		"prefix": "lo",
-		"body": "local ${1:a} = ${0:a}",
+		"body": "local ${1:a} = ${0:nil}",
 		"description": "區域變數"
 	},
 	"if...else": {
@@ -102,6 +102,15 @@
 			"end"
 		],
 		"description": "函數"
+	},
+	"anonymous function": {
+		"prefix": "af",
+		"body": [
+			"function($1)",
+			"    $0",
+			"end"
+		],
+		"description": "匿名函數"
 	},
 	"open file(read mod)": {
 		"prefix": "opr",

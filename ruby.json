@@ -136,5 +136,10 @@
 			"end"
 		],
 		"description": "函數"
+	},
+	"lambda": {
+		"prefix": "la",
+		"body": "->(${1:x}) { ${0:x**2} }",
+		"description": "匿名函數"
 	}
 }
