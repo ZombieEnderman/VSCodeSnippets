@@ -131,6 +131,16 @@
 		],
 		"description": "do...while迴圈"
 	},
+	"main program": {
+		"prefix": "main",
+		"body": [
+			"int main(${1:void})",
+			"{",
+			"    $0",
+			"}"
+		],
+		"description": "主程式結構"
+	},
 	"function": {
 		"prefix": "fun",
 		"body": [
@@ -150,5 +160,35 @@
 		"prefix": "df",
 		"body": "#define ${1:rt} ${0:return}",
 		"description": "巨集"
+	},
+	"cancel macro": {
+		"prefix": "uf",
+		"body": "#undef ${0:rt}",
+		"description": "取消巨集"
+	},
+	"typedef": {
+		"prefix": "tf",
+		"body": "typedef ${1:char} ${0:*str};",
+		"description": "自訂型別"
+	},
+	"enum": {
+		"prefix": "em",
+		"body": [
+			"enum ${1:State}",
+			"{",
+			"    ${0:online}",
+			"};"
+		],
+		"description": "列舉"
+	},
+	"struct": {
+		"prefix": "st",
+		"body": [
+			"struct ${1:Score}",
+			"{",
+			"    ${2:int} ${0:value};",
+			"};"
+		],
+		"description": "結構體"
 	}
 }
