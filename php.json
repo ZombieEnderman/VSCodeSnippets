@@ -19,6 +19,11 @@
 		"body": "trim(${0:0})",
 		"description": "去除跳脫字元"
 	},
+	"define": {
+		"prefix": "df",
+		"body": "define(\"${1:PI}\", ${0:3.1415926});",
+		"description": "常數"
+	},
 	"if...else": {
 		"prefix": "ie",
 		"body": [

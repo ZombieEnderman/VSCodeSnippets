@@ -190,5 +190,15 @@
 			"};"
 		],
 		"description": "結構體"
+	},
+	"union": {
+		"prefix": "un",
+		"body": [
+			"union ${1:Score}",
+			"{",
+			"    ${2:int} ${0:value};",
+			"};"
+		],
+		"description": "聯合體"
 	}
 }
