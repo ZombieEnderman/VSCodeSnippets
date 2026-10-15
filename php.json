@@ -16,13 +16,18 @@
 	},
 	"remove escape character": {
 		"prefix": "tm",
-		"body": "trim(${0:0})",
+		"body": "trim(${0:0});",
 		"description": "去除跳脫字元"
 	},
 	"define": {
 		"prefix": "df",
 		"body": "define(\"${1:PI}\", ${0:3.1415926});",
 		"description": "常數"
+	},
+	"get type": {
+		"prefix": "gp",
+		"body": "gettype(${0:7});",
+		"description": "獲取類型"
 	},
 	"if...else": {
 		"prefix": "ie",
@@ -36,20 +41,20 @@
 		],
 		"description": "if...else結構"
 	},
-	"if...else if...else": {
+	"if...elseif...else": {
 		"prefix": "ef",
 		"body": [
 			"if (${1:false}) {",
 			"    $2",
 			"}",
-			"else if (${3:true}) {",
+			"elseif (${3:true}) {",
 			"    $4",
 			"}",
 			"else {",
 			"    $0",
 			"}"
 		],
-		"description": "if...else if...else結構"
+		"description": "if...elseif...else結構"
 	},
 	"switch": {
 		"prefix": "sh",
@@ -66,10 +71,20 @@
 		],
 		"description": "switch...case結構"
 	},
+	"match": {
+		"prefix": "mh",
+		"body": [
+			"match (${1:\\$key}) {",
+			"    ${2:1} => ${3:87},",
+			"    default => ${0:0}",
+			"};"
+		],
+		"description": "match結構"
+	},
 	"for...loop": {
 		"prefix": "fp",
 		"body": [
-			"for (${1:\\$index} = 0; ${2:\\$index} < ${3:10}; ${4:\\$index}++) {",
+			"for (${1:\\$index} = ${2:0}; ${1:\\$index} < ${3:10}; ${1:\\$index}++) {",
 			"    $0",
 			"}"
 		],
@@ -103,12 +118,19 @@
 		"description": "do...while迴圈"
 	},
 	"function": {
-		"prefix": "fn",
+		"prefix": "fun",
 		"body": [
 			"function ${1:name}(${2:\\$params}) {",
 			"    $0",
 			"}"
 		],
 		"description": "函數"
+	},
+	"arrow function": {
+		"prefix": "af",
+		"body": [
+			"fn(${1:\\$x}) => ${0:\\$x};",
+		],
+		"description": "箭頭函數"
 	}
 }
