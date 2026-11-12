@@ -140,7 +140,7 @@
 	"open file": {
 		"prefix": "op",
 		"body": [
-			"with open(${1:file}, ${2:'w'}, encoding=\"utf-8\") as ${3:f}:",
+			"with open(${1:file}, \"${2:w}\", encoding=\"utf-8\") as ${3:f}:",
 			"    pass",
 		],
 		"description": "開啟檔案"
